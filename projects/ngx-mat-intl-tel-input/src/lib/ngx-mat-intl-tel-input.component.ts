@@ -48,7 +48,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
   @Input() errorStateMatcher: ErrorStateMatcher;
   @Input() enableSearch = false;
   // tslint:disable-next-line:variable-name
-  private _placeholder: string;
+  private _placeholder = 'Search...';
   // tslint:disable-next-line:variable-name
   private _required = false;
   // tslint:disable-next-line:variable-name
@@ -148,7 +148,7 @@ export class NgxMatIntlTelInputComponent implements OnInit, OnDestroy, DoCheck, 
 
   ngDoCheck(): void {
     if (this.ngControl) {
-      this.errorState = this.ngControl.invalid && this.ngControl.touched;
+      this.errorState = this.phoneNumber && this.ngControl.invalid && this.ngControl.touched;
       this.stateChanges.next();
     }
   }
