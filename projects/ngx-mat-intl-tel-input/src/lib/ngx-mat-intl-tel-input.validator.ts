@@ -17,4 +17,5 @@ export const phoneNumberValidator = (control: FormControl) => {
       return error;
     }
   }
+  return null;
 };

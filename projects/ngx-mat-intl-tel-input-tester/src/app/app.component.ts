@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
 
 
 @Component({
@@ -18,10 +18,11 @@ export class AppComponent {
   profileForm = this.fb.group({
     firstName: [''],
     lastName: [''],
-    phone: ['+919813785563']
+    phone: ['']
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) {
+  }
 
   onSubmit() {
     console.log('onSubmit', this.phoneForm);
